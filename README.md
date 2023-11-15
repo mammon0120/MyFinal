@@ -1,6 +1,6 @@
 # Final Project Report
 
-* Student Name:
+* Student Name: Yumei Wang
 * Github Username:
 * Semester:
 * Course:
