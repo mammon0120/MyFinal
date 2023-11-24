@@ -3,7 +3,7 @@
 * Student Name: Yumei Wang
 * Github Username: mammon0120
 * Semester: Fall 2023
-* Course: CS5001
+* Course:
 
 
 
