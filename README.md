@@ -1,9 +1,9 @@
 # Final Project Report
 
 * Student Name: Yumei Wang
-* Github Username:
-* Semester:
-* Course:
+* Github Username: mammon0120
+* Semester: Fall 2023
+* Course: CS5001
 
 
 
