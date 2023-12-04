@@ -6,12 +6,16 @@ from game_setting import Player
 WELCOME_MESSAGE = """-------Welcome to the game-------
 ---Let your luck roll the dice---\n"""
 GOODBYE_MESSAGE = """-----Thanks for playing the game-----"""
-PROMPT_START = """Please enter 'S'\\'Q' to Start\\Quit the Game: """
+PROMPT_START = """Please enter 'S'\\'Q' to Start\\Quit the New Game: """
 PROMPT_NAME = """What's your name: """
 PROMPT_ROLL = """Please enter 'R' to Roll the Dice: """
 PROMPT_PROGRESS = """------Your Current Game Progress-----\n"""
 WIN_MESSAGE = """***Congratulations! You just reached the endpoint! ***"""
 LOSE_MESSAGE = """------Game Lose!------"""
+ASK_LOAD = """Do you want to continue playing the last unfinished game?
+'Y' for yes / Others for no: """
+ASK_SAVE = """Do you want to save this unfinished game?
+'Y' for yes / Others for no: """
 
 # command settings
 EXIT_GAME = "Q"
@@ -100,8 +104,23 @@ def main() -> None:
     print(WELCOME_MESSAGE)
     print_help_message(HELP_MESSAGE)
 
-    # get ready to start the game
-    player = check_start()
+    # ask the player if he wants to continue the previous game
+    check_load = input(ASK_LOAD)
+
+    # if yes, load the game history file and create the player information
+    if check_load == 'Y':
+        # check if there is a game history
+        if game_run.load_history():
+            name, game_hp, position = game_run.load_history()
+            player = Player(name, game_hp, position)
+        else:
+            # if something wrong with the file, start a new game
+            player = check_start()
+    else:
+        # if no, clean game history and get ready to start a new game
+        game_run.clean_history()
+        player = check_start()
+
     # load the game's settings
     setting = game_run.load_setting(SETTING_FILE)
 
@@ -143,6 +162,14 @@ def main() -> None:
         # in case the player wants to see the help message
         elif command == HELP:
             print_help_message(HELP_MESSAGE)
+
+    # ask player whether save the unfinished game
+    save_game = input(ASK_SAVE)
+    if save_game == 'Y':
+        game_run.save_game_history(player)
+        print("Game History Saved.")
+    else:
+        game_run.clean_history()
 
     print(GOODBYE_MESSAGE)
     print(PROMPT_PROGRESS)
