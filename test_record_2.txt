@@ -1,0 +1,8 @@
+test_change_hp (test_game_setting.SettingTest.test_change_hp) ... ok
+test_change_position (test_game_setting.SettingTest.test_change_position) ... ok
+test_init (test_game_setting.SettingTest.test_init) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
