@@ -30,4 +30,4 @@ class SettingTest(unittest.TestCase):
 
 
 def main():
-    unittest.main()
+    unittest.main(verbosity=3)
