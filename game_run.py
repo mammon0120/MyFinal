@@ -65,6 +65,7 @@ def check_endpoint(position: int) -> bool:
     Returns:
         bool: if the player has reached the endpoint
     """
+    # if position >= END_POINT, then reach the endpoint
     if position < END_POINT:
         return False
     else:
@@ -87,6 +88,7 @@ def check_hp(hp: int) -> bool:
     Returns:
         bool: wheither the game is over
     """
+    # if hp <=0, then game over
     if hp <= 0:
         return True
     else:
@@ -95,7 +97,7 @@ def check_hp(hp: int) -> bool:
 
 def load_history(filename=GAME_HISTORY) -> tuple:
     """
-    Load the game history and get the latest game's information.
+    Load the game history and get the previous game's information.
 
     Example:
         >>> load_history("test_history_1.txt")
@@ -115,6 +117,7 @@ def load_history(filename=GAME_HISTORY) -> tuple:
             for line in file:
                 if line.strip():
                     setting.append(line.strip())
+        # code defensively. in case there are something wrong
         if len(setting) != 3:
             print("Something Wrong with the game history. Please Start a New Game")
             return ()
@@ -133,7 +136,7 @@ def load_history(filename=GAME_HISTORY) -> tuple:
 
 def clean_history(filename=GAME_HISTORY) -> None:
     """
-    Clean the old game history.
+    Clean the previous game history.
 
     Args:
         filename(str): name of the file, default to be GAME_HISTORY
@@ -142,6 +145,7 @@ def clean_history(filename=GAME_HISTORY) -> None:
     """
     try:
         with open(filename, 'w') as file:
+            # clean up the txt file
             file.truncate(0)
     except FileNotFoundError:
         print("Game History is missing!")
