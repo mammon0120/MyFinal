@@ -1,9 +1,9 @@
 *****Game Rules*****
-1. Starting Point: Players start from the starting point with a HP(Health Points) of 100.
+1. Starting Point: Players start at the starting point with a HP(Health Points) of 100.
 2. Rolling the Dice: The number of steps players can move is determined by the dice.
 3. Rewards: Along the way, players may meet rewards squares.
 4. Penalty: There are also penalty squares on the path.
-5. Game Win: Successfully reaching the endpoint.
+5. Game Win: Successfully reaching the endpoint. The board is 30 squares long.
 6. Game Over: Lose the game if the HP drops to 0 before reaching the endpoint.
 --------H----Help Message-------
 --------P----Game Progress------
