@@ -12,7 +12,7 @@ PROMPT_ROLL = """Please enter 'R' to Roll the Dice: """
 PROMPT_PROGRESS = """------Your Current Game Progress-----\n"""
 WIN_MESSAGE = """***Congratulations! You just reached the endpoint! ***"""
 LOSE_MESSAGE = """------Game Lose!------"""
-ASK_LOAD = """Do you want to continue playing the last unfinished game?
+ASK_LOAD = """Do you want to continue playing the previous unfinished game?
 'Y' for yes / Others for no: """
 ASK_SAVE = """Do you want to save this unfinished game?
 'Y' for yes / Others for no: """
@@ -97,10 +97,11 @@ def print_trigger(trigger_type: str, value: int) -> None:
             print(f"You triggered a Penalty! You will take {value} steps back.")
 
 
-def main() -> None:
+def run_game() -> None:
     """
-    The main code to run this game.
+    The core code to run this game.
     """
+    # print welcome message and help message
     print(WELCOME_MESSAGE)
     print_help_message(HELP_MESSAGE)
 
@@ -134,12 +135,14 @@ def main() -> None:
             dice = game_run.roll_dice()
             player.change_position(dice)
 
-            # now check if a reward or penalty is triggered
+            # now check whether a reward or penalty is triggered
             if player.position in setting:
+                # if it does, find out the type and the value and print it out
                 trigger = setting[player.position].split(" ")
                 trigger_type = trigger[0]
                 value = int(trigger[1])
                 print_trigger(trigger_type, value)
+                # adjust the player's HP or position
                 if trigger_type == "hp":
                     player.change_hp(value)
                 elif trigger_type == "position":
@@ -166,15 +169,25 @@ def main() -> None:
     # ask player whether save the unfinished game
     save_game = input(ASK_SAVE)
     if save_game == 'Y':
+        # if player input 'Y' for yes, then save this game
         game_run.save_game_history(player)
         print("Game History Saved.")
     else:
+        # if player input other words for no, then clean the history file
         game_run.clean_history()
 
+    # print goodbye message and the player's progress
     print(GOODBYE_MESSAGE)
     print(PROMPT_PROGRESS)
     print(player)
     sys.exit()
+
+
+def main() -> None:
+    """
+    main part to start the game.
+    """
+    run_game()
 
 
 if __name__ == "__main__":
