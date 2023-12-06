@@ -1,0 +1,58 @@
+-------Welcome to the game-------
+---Let your luck roll the dice---
+
+*****Game Rules*****
+1. Starting Point: Players start at the starting point with a HP(Health Points) of 100.
+2. Rolling the Dice: The number of steps players can move is determined by the dice.
+3. Rewards: Along the way, players may meet rewards squares.
+4. Penalty: There are also penalty squares on the path.
+5. Game Win: Successfully reaching the endpoint. The board is 30 squares long.
+6. Game Over: Lose the game if the HP drops to 0 before reaching the endpoint.
+--------H----Help Message-------
+--------P----Game Progress------
+--------Q----Quit The Game------
+
+Do you want to continue playing the previous unfinished game?
+'Y' for yes / Others for no: n
+Please enter 'S'\'Q' to Start\Quit the New Game: S
+What's your name: may111
+Name must be alphabetic.
+What's your name: may
+***Player Information***
+Name:           may
+GAME_HP:        100
+POSITION_NOW:     0
+Please enter 'R' to Roll the Dice: r
+Please enter 'R' to Roll the Dice: R
+It's a 3 and you will move 3 steps forward!
+You triggered a Penalty! Your HP will -10.
+Please enter 'R' to Roll the Dice: P
+***Player Information***
+Name:           may
+GAME_HP:         90
+POSITION_NOW:     3
+Please enter 'R' to Roll the Dice: R
+It's a 5 and you will move 5 steps forward!
+You triggered a Penalty! Your HP will -20.
+Please enter 'R' to Roll the Dice: R
+It's a 1 and you will move 1 steps forward!
+-----Nothing Happened-----
+Please enter 'R' to Roll the Dice: R
+It's a 1 and you will move 1 steps forward!
+You triggered a Reward! You will move 8 more steps.
+Please enter 'R' to Roll the Dice: P
+***Player Information***
+Name:           may
+GAME_HP:         70
+POSITION_NOW:    18
+Please enter 'R' to Roll the Dice: Q
+Do you want to save this unfinished game?
+'Y' for yes / Others for no: Y
+Game History Saved.
+-----Thanks for playing the game-----
+------Your Current Game Progress-----
+
+***Player Information***
+Name:           may
+GAME_HP:         70
+POSITION_NOW:    18
