@@ -1,0 +1,57 @@
+-------Welcome to the game-------
+---Let your luck roll the dice---
+
+*****Game Rules*****
+1. Starting Point: Players start at the starting point with a HP(Health Points) of 100.
+2. Rolling the Dice: The number of steps players can move is determined by the dice.
+3. Rewards: Along the way, players may meet rewards squares.
+4. Penalty: There are also penalty squares on the path.
+5. Game Win: Successfully reaching the endpoint. The board is 30 squares long.
+6. Game Over: Lose the game if the HP drops to 0 before reaching the endpoint.
+--------H----Help Message-------
+--------P----Game Progress------
+--------Q----Quit The Game------
+
+Do you want to continue playing the previous unfinished game?
+'Y' for yes / Others for no: N
+Please enter 'S'\'Q' to Start\Quit the New Game: S
+What's your name: May
+***Player Information***
+Name:           May
+GAME_HP:        100
+POSITION_NOW:     0
+Please enter 'R' to Roll the Dice: R
+It's a 2 and you will move 2 steps forward!
+-----Nothing Happened-----
+Please enter 'R' to Roll the Dice: R
+It's a 5 and you will move 5 steps forward!
+-----Nothing Happened-----
+Please enter 'R' to Roll the Dice: R
+It's a 4 and you will move 4 steps forward!
+-----Nothing Happened-----
+Please enter 'R' to Roll the Dice: R
+It's a 2 and you will move 2 steps forward!
+-----Nothing Happened-----
+Please enter 'R' to Roll the Dice: P
+***Player Information***
+Name:           May
+GAME_HP:        100
+POSITION_NOW:    13
+Please enter 'R' to Roll the Dice: R
+It's a 6 and you will move 6 steps forward!
+-----Nothing Happened-----
+Please enter 'R' to Roll the Dice: R
+It's a 1 and you will move 1 steps forward!
+You triggered a Reward! You will move 5 more steps.
+Please enter 'R' to Roll the Dice: P
+***Player Information***
+Name:           May
+GAME_HP:        100
+POSITION_NOW:    25
+Please enter 'R' to Roll the Dice: R
+It's a 3 and you will move 3 steps forward!
+You triggered a Penalty! Your HP will -10.
+Please enter 'R' to Roll the Dice: R
+It's a 4 and you will move 4 steps forward!
+-----Nothing Happened-----
+***Congratulations! You just reached the endpoint! ***
