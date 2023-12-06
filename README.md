@@ -112,7 +112,7 @@ If the value of player's position is in the key values of the dictionary, then r
 Then according to the type and value of this trigger, adjust the player's HP or position.
 
 
-### Major Challenges
+## Major Challenges
 At the beginning, I was hesitant about how to set up rewards and penalties in the game. I can use a series of if statements, such as if the player reaches a certain square, then display a reward.
 However, it's really a bad design and needs a lot of work, making it less conductive to later modifications.
 After some thought, I decided to use a dictionary. Its key-value pairs can efficiently express the association between a square and its corresponding reward or penalty.
